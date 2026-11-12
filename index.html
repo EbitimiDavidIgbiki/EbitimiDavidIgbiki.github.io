@@ -141,6 +141,63 @@ html {
     background: #f5d995;
 }
 
+/* Featured ebook */
+.book-card {
+    display: grid;
+    grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+    gap: 32px;
+    align-items: center;
+    margin-top: 32px;
+    padding: 28px;
+    background: #152338;
+    border: 1px solid #b99a55;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.book-card img {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.book-card h3 {
+    margin: 0 0 12px;
+    color: #f0c77b;
+    font-size: 26px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.book-card .book-author { margin: 0 0 16px; }
+.book-card .book-price {
+    margin: 0;
+    color: #f0c77b;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.book-card .button { margin-top: 16px; }
+.book-card .button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+    .book-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        padding: 20px;
+    }
+    .book-card .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 </style>
 </head>
 
@@ -195,6 +252,20 @@ html {
     readers to develop wisdom, strengthen
     self-respect, and live purposefully.
   </p>
+
+<article class="book-card" aria-labelledby="unbreakable-title">
+  <img src="assets/images/Unbreakable_%20Courage%20to%20Stand%20Tall.png"
+       alt="Cover of UNBREAKABLE: The Courage to Stand Tall by Ebitimi David Igbiki"
+       width="1024" height="1536" loading="lazy" decoding="async">
+  <div>
+    <h3 id="unbreakable-title">UNBREAKABLE: The Courage to Stand Tall</h3>
+    <p class="book-author">By Ebitimi David Igbiki</p>
+    <p>A practical guide for teenagers to recognize bullying and toxic relationships, manage fear and self-doubt, build confidence, and protect their peace.</p>
+    <p class="book-price">$3.99</p>
+    <a class="button" href="https://payhip.com/b/AzSNs"
+       aria-label="Buy Now: UNBREAKABLE: The Courage to Stand Tall on Payhip">Buy Now</a>
+  </div>
+</article>
 
 <a class="button"
    href="https://www.amazon.com/author/ebitimidavidigbiki101"
