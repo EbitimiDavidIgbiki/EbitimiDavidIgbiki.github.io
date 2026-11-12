@@ -198,10 +198,37 @@ html {
     }
 }
 
+.skip-link {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 10;
+    padding: 12px 20px;
+    background: #e0bd72;
+    color: #101b2b;
+    font-weight: bold;
+    transform: translateY(calc(-100% - 8px));
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
 </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#home">Skip to main content</a>
   <header>
     <div class="brand">EBITIMI DAVID IGBIKI</div>
     <nav>
@@ -213,7 +240,7 @@ html {
     </nav>
   </header>
 
-  <main id="home">
+  <main id="home" tabindex="-1">
     <h1>Knowledge Creates Value.<br>Discipline Builds Wealth.</h1>
 
     <p>Welcome to the official website of<br>
